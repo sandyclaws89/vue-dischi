@@ -1,7 +1,12 @@
 <template>
   <main>
       <div class="container">
-           <CardDisc
+           <CardDisc v-for="(disc, index) in arrDisc" :key="index"
+           :disc-img="disc.poster"
+           :disc-title="disc.title"
+           :disc-author="disc.author"
+           :disc-genre="disc.genre"
+           :disc-year="disc.year"
            />
       </div>
      
@@ -17,7 +22,7 @@ export default {
     name:'MainDisc',
     data () {
         return {
-            arrDisc: [],
+            arrDisc: null,
         };
     },
     components: {
@@ -27,13 +32,12 @@ export default {
         /*questa mi serve farla in asincrono perchè ci sono API che ci mettono tanto tempo.*/
         axios.get('https://flynn.boolean.careers/exercises/api/array/music')
         /*per renderla asincrona uso il .then, che è un metodo dell'oggetto che ritorna da .then */
-        .then(function(NetworkResult) {
-            
+        .then((NetworkResult)=> {
             // console.log(NetworkResult.data.response);
             this.arrDisc = NetworkResult.data.response;
             console.log(this.arrDisc);
-        })
-    }
+        });
+    },
 };
 </script>
 
