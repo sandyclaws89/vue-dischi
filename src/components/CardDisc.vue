@@ -1,8 +1,6 @@
 <template>
   <div class="row container">
-      <div class="offset-2">
-      </div>
-      <div class="col-2">
+      <div>
         <img src="" alt="">
         <h1></h1>
         <span></span>
@@ -19,6 +17,6 @@ export default {
 <style scoped lang="scss" >
     div{
         background-color: blue;
-        width: 50px;
+        // width: 50px;
     }
 </style>

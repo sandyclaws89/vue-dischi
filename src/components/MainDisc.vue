@@ -2,7 +2,6 @@
   <main>
       <div class="container">
            <CardDisc
-           v-for:
            />
       </div>
      
@@ -12,26 +11,27 @@
 
 <script>
 import axios from 'axios';
-import CardDisc from './CardDisc.vue'
+import CardDisc from './CardDisc.vue';
 
 export default {
     name:'MainDisc',
     data () {
         return {
-
-        }
+            arrDisc: [],
+        };
     },
     components: {
       CardDisc,
     },
     created() {
         /*questa mi serve farla in asincrono perchè ci sono API che ci mettono tanto tempo.*/
-        const promise= axios.get('https://flynn.boolean.careers/exercises/api/array/music');
+        axios.get('https://flynn.boolean.careers/exercises/api/array/music')
         /*per renderla asincrona uso il .then, che è un metodo dell'oggetto che ritorna da .then */
-        promise.then(function(NetworkResult) {
+        .then(function(NetworkResult) {
             
-            console.log(NetworkResult.data);
-            return NetworkResult.data;
+            // console.log(NetworkResult.data.response);
+            this.arrDisc = NetworkResult.data.response;
+            console.log(this.arrDisc);
         })
     }
 };
