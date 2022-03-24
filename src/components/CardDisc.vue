@@ -1,11 +1,9 @@
 <template>
-  <div class="row d-flex justify-content-center">
-      <div class="offset-2 col-2">
+  <div>
         <img :src="DiscImg" :alt="DiscAuthor">
         <h1>{{DiscAuthor}}</h1>
-        <div class="title">{{DiscGenre}}</div>
+        <div>{{DiscGenre}}</div>
         <span>{{DiscYear}}</span>
-      </div>
   </div>
 </template>
 
@@ -28,7 +26,7 @@ export default {
       width: 100px;
       margin: 5px;  
     }
-    .title{
-        display: block;
-    }
+    // div{
+    //     width: calc((100% - 5px)/5)
+    // }
 </style>
