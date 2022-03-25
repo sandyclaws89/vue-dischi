@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="card d-flex justify-content-center align-items-center">
         <img :src="DiscImg" :alt="DiscAuthor">
-        <h1>{{DiscAuthor}}</h1>
+        <h2>{{DiscAuthor}}</h2>
         <div>{{DiscGenre}}</div>
         <span>{{DiscYear}}</span>
   </div>
@@ -23,10 +23,13 @@ export default {
 <style scoped lang="scss" >
    
     img{
-      width: 100px;
-      margin: 5px;  
+      width: 80%;
+      margin: 5px;
+      flex-grow: 1;  
+    };
+    .card{
+      padding: 5px;
+      background-color: teal;
     }
-    // div{
-    //     width: calc((100% - 5px)/5)
-    // }
+ 
 </style>

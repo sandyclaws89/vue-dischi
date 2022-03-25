@@ -1,13 +1,13 @@
 <template>
   <main>
-      <div class="mine-container flex">
+      <div class="mine-container d-flex justify-content-center">
            <CardDisc v-for="(disc, index) in arrDisc" :key="index"
            :disc-img="disc.poster"
            :disc-title="disc.title"
            :disc-author="disc.author"
            :disc-genre="disc.genre"
            :disc-year="disc.year"
-           class="card"
+           class="card-main"
            />
       </div>
      
@@ -42,15 +42,17 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
     main{
-        height: calc(100vh - 50px);
         background-color: cadetblue ;
+        padding-bottom: 100px;
+        padding-top: 20px;
     }
-    .card{
-        width: calc((100% - 2.5px)/5);
+    .card-main{
+        width: calc((100% - 250px) / 5);
+        margin: 5px;
     };
     .mine-container{
-        flex-wrap: nowrap;
-    }
+        flex-wrap: wrap;
+    };
 </style>
