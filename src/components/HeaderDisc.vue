@@ -5,16 +5,20 @@
       </div>
       <div class="col-6 text-end px-5">
         <label for="genre"></label>
-        <select name="genre" id="genre">genre
-            <option  value="null">-----</option>
-            <option @change="FunctionRock" value="rock">Rock</option>
+        <select @change="rockFunction" name="genre" id="genre">genre
+            <option value="null">-----</option>
+            <option value="rock">Rock</option>
             <option value="pop">Pop</option>
-            <option @change="FunctionJazz" value="jazz">Jazz</option>
+            <option value="jazz">Jazz</option>
             <option value="metal">Metal</option>    
         </select>          
         
       </div>
-      
+      <!-- PSEUDOCODIFICA PER FILTRARE PER GENERE -->
+      <!--  
+            METTO UN EVENTO CHANGE AD OGNI OPTION
+            CON LE PROPS PORTO I DATI NEL MAIN
+            CREO UN   -->
   </header>
 </template>
 
@@ -34,12 +38,9 @@
 
         },
         methods: {
-            // FunctionRock() {
-                // console:() => console.log();
-        // },
-        // functionLog() {
-        //     this.console.log()
-        // }
+            rockFunction(test) {
+            console.log(test)
+  }
     }
 }
 </script>
