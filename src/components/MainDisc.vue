@@ -11,7 +11,7 @@
            class="card-main"
            />
             </div>
-            <div class="mine-container  d-flex justify-content-center">
+            <div v-if: class="mine-container  d-flex justify-content-center">
            <CardDisc v-for="(disc, index) in arrDisc" :key="index"
            :disc-img="disc.poster"
            :disc-title="disc.title"
