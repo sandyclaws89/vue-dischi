@@ -1,6 +1,7 @@
 <template>
   <main>
-      <div class="mine-container d-flex justify-content-center">
+      <div>
+          <div class="mine-container  d-flex justify-content-center">
            <CardDisc v-for="(disc, index) in arrDisc" :key="index"
            :disc-img="disc.poster"
            :disc-title="disc.title"
@@ -9,6 +10,26 @@
            :disc-year="disc.year"
            class="card-main"
            />
+            </div>
+            <div class="mine-container  d-flex justify-content-center">
+           <CardDisc v-for="(disc, index) in arrDisc" :key="index"
+           :disc-img="disc.poster"
+           :disc-title="disc.title"
+           :disc-author="disc.author"
+           :disc-genre="disc.genre"
+           :disc-year="disc.year"
+           class="card-main"
+           />
+            </div>
+<!--         
+           <CardDiscRock v-for="(disc, index) in arrDisc.index.genre" :key="index"
+           :disc-img="disc.poster"
+           :disc-title="disc.title"
+           :disc-author="disc.author"
+           :disc-genre="disc.genre"
+           :disc-year="disc.year"
+           class="card-main"
+           /> -->
       </div>
      
      
